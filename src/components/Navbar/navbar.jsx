@@ -13,6 +13,7 @@ export const Navbar = () => {
                     <p className="navbar_link">IVREA</p>
                     <p className="navbar_link">Panini</p>
                     <p className="navbar_link">Ovni Press</p>
+                    <p className="navbar_link">Distrito</p>
                 </nav>
                 <CartWidget />
             </div>
