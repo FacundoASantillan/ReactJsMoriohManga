@@ -20,6 +20,7 @@
     color: #8f1a26;
     cursor: pointer;
     margin: 3px;
+    text-decoration: none;
 }
 .navbar_link:hover{
     color: #db2739;

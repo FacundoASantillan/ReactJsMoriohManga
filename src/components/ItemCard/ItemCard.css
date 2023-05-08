@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
-
+    background-color: #8f1a26;
 }
 .catalogo-index div{
     text-align: center;

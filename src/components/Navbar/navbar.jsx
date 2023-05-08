@@ -1,8 +1,8 @@
 
 import './navbar.css'
 import logo from '../../assets/logo1.jpg'
-import CardHeader from 'react-bootstrap/esm/CardHeader'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
     return(
@@ -10,10 +10,10 @@ export const Navbar = () => {
             <div className="header_container">
                 <img className="logo" src={logo} alt="Morioh Manga" />
                 <nav className="navbar">
-                    <p className="navbar_link">IVREA</p>
-                    <p className="navbar_link">Panini</p>
-                    <p className="navbar_link">Ovni Press</p>
-                    <p className="navbar_link">Distrito</p>
+                    <Link to='/ivrea' className="navbar_link">IVREA</Link>
+                    <Link to='/panini' className="navbar_link">Panini</Link>
+                    <Link to='/ovnipress' className="navbar_link">Ovni Press</Link>
+                    <Link to='/distrito' className="navbar_link">Distrito</Link>
                 </nav>
                 <CartWidget />
             </div>

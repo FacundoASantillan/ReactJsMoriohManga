@@ -41,10 +41,10 @@ const MOCK_DATA = [
     },
     {
         id: 6,
-        nombre: "Dragon Ball CSF: 3",
-        precio: 3900,
+        nombre: "Dragon Ball Super 1",
+        precio: 1800,
         editorial: "IVREA",
-        img: "public/img/dragonballcolorf3.png",
+        img: "public/img/dragonballsuper1.png",
         stock: 1
     },
     {
@@ -97,10 +97,10 @@ const MOCK_DATA = [
     },
     {
         id: 13,
-        nombre: "My Hero 36",
-        precio: 1800,
+        nombre: "Monster 1",
+        precio: 4900,
         editorial: "IVREA",
-        img: "public/img/myhero36.png",
+        img: "public/img/monster1.png",
         stock: 1
     },
     {
