@@ -1,5 +1,5 @@
 import "./ItemCard.css"
-
+import { Link } from "react-router-dom"
 
 const ItemCard = ( {item} ) => {
     return(
@@ -8,7 +8,7 @@ const ItemCard = ( {item} ) => {
             <h5>{item.editorial}</h5>
             <h3>{item.nombre}</h3>
             <h4><strong>${item.precio}</strong></h4>
-            <a href="#" >Añadir al carrito</a>
+            <Link to={`/detail/${item.id}`}>Ver más</Link>
         </div>
     )
 }

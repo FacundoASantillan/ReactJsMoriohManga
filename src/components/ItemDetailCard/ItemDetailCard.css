@@ -1,0 +1,57 @@
+.detalle-producto{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #8f1a26;
+}
+
+.detalle-producto img{
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+}
+
+.detalle-producto div{
+    margin: 20px;
+}
+
+.detalle-producto div h3{
+    color: #e1aa47;
+}
+
+.detalle-producto div h5{
+    color: white;
+    font-size: 20px;
+}
+
+.detalle-producto div h4{
+    color: white;
+}
+
+.detalle-producto div p{
+    color: white;
+    font-weight: 500;
+}
+
+.detalle-producto div a{
+    position: relative;
+    left: 218px;
+    top: 15px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #8f1a26;
+    background-color: #e1aa47;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.detalle-producto div a:hover{
+    background-color: black;
+    transition-duration: 2s;
+    color: #e1aa47;
+}
+
+
+
+
+

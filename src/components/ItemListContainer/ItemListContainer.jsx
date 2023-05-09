@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom'
 export const ItemListContainer = ({Stock}) =>{
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState (true)
-    /*console.log(productos)*/
+    console.log(productos)
 
     const {editorialId} = useParams()
     console.log(editorialId)
@@ -29,7 +29,7 @@ export const ItemListContainer = ({Stock}) =>{
         .finally(() => {
             setLoading(false)
         })
-    }, [])
+    }, [editorialId])
     
     
     return(

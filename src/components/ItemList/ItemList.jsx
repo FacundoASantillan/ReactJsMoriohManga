@@ -1,8 +1,5 @@
 import ItemCard from "../ItemCard/ItemCard"
 
-
-
-
 const ItemList = ( {items} ) =>{
     return(
         <div className="catalogo-index">
