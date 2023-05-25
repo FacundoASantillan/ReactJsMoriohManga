@@ -8,4 +8,6 @@
 }
 .carrito span{
     font-weight: 700;
+    text-decoration: none;
+    color: #8f1a26;
 }

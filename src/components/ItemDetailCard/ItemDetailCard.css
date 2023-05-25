@@ -50,7 +50,10 @@
     transition-duration: 2s;
     color: #e1aa47;
 }
-
+.detalle-producto div h6{
+    color: white;
+    font-size: 15px;
+}
 
 
 

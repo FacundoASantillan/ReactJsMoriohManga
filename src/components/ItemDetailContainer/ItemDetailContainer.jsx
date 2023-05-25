@@ -5,13 +5,14 @@ import BasicExample from '../spinner/spinner'
 import { ItemDetailCard } from '../ItemDetailCard/ItemDetailCard'
 import "./ItemDetailContainer.css"
 
+
 export const ItemDetailContainer = ({Stock}) => {
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)
 
     const {itemId} = useParams()
-    console.log(itemId)
-    console.log(item)
+    /*console.log(itemId)
+    console.log(item)*/
     useEffect(() => {
         setLoading(true)
         pedirProductos()
