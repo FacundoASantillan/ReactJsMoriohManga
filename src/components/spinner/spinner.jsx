@@ -1,7 +1,7 @@
 import Spinner from 'react-bootstrap/Spinner';
 
 
-function BasicExample() {
+function Loader() {
 return (
     <Spinner animation="border" role="status">
         <div className='spinner-bt'>
@@ -11,4 +11,4 @@ return (
 );
 }
 
-export default BasicExample;
+export default Loader;

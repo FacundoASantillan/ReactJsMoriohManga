@@ -15,9 +15,17 @@ export const ItemCount = ({stock, cantidad, setCantidad, add}) => {
 
 
 return (<div className='contador'>
-    <button onClick={handleRestar} className='btn btn-outline-dark'>-</button>
+    <button
+        onClick={handleRestar} 
+        className={cantidad === 1 ?'btn mx-1 btn-outline-secondary' :'btn mx-1 btn-outline-dark'}
+        disabled={cantidad === 1}
+    >-</button>
     <span className='mx-2'>{cantidad}</span>
-    <button onClick={handleSumar} className='btn btn-dark'>+</button>
+    <button
+        onClick={handleSumar}
+        className={cantidad === stock ?'btn mx-1 btn-secondary' :'btn mx-1 btn-dark'}
+        disabled={cantidad === stock}
+        >+</button>
     <a onClick={add} href="#">Añadir al carrito</a> 
 </div>
 

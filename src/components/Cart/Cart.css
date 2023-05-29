@@ -1,6 +1,6 @@
 .cartProductos{
     display: grid;
-    grid-template-columns: 500px auto auto;
+    grid-template-columns: auto auto auto;
     background-color: #8f1a26;
     margin: 20px;
 }
@@ -9,18 +9,29 @@
     width: 150px;
     height: 200px;
     margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+}
+
+.imgBox{
+    display: flex;
+    justify-content: center;
 }
 
 .trash{
     height: 25px;
     width: 25px;
+    justify-content: end;
+    margin-left: 50px;
 }
 
 .datosProductos{
     display: block;
     justify-content: start;
     align-items: center;
-    margin: 20px;
+    margin: 40px;
 }
 
 .datosProductos h2{
@@ -31,4 +42,14 @@
 .datosProductos h3{
     color: white;
     margin-bottom: 20px;
+}
+
+.cartVacio{
+    color: #8f1a26;
+}
+
+.btnCart{
+    color: #e1aa47;
+    background-color: #8f1a26;
+    font-weight: 700;
 }

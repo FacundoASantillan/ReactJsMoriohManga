@@ -6,21 +6,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/Cartcontext';
 import Cart from './components/Cart/Cart';
-
+import FinishOrder from './components/FinishOrder/FinishOrder';
 
 
 function App() {
-
-  /*const [cart, setCart] = useState([])
-  console.log(cart)
-
-  const addCart = (item) => {
-    setCart([...cart, item])
-  }
-
-  const isInCart = (id) => {
-    return cart.some((item) => item.id === id) 
-  }*/
 
   return (
     <CartProvider>
@@ -29,9 +18,10 @@ function App() {
           <Navbar />
           <Routes>
             <Route path='/' element={<ItemListContainer Stock={"Titulos disponibles:"}/> } />
-            <Route path=':editorialId' element={<ItemListContainer Stock={"Titulos disponibles:"} /> } />
+            <Route path='/editorial/:editorialId' element={<ItemListContainer Stock={"Titulos disponibles:"} /> } />
             <Route path='/detail/:itemId' element={<ItemDetailContainer /> } />
             <Route path='/Cart' element={<Cart /> } />
+            <Route path='/Finishorder' element={<FinishOrder /> } />
             <Route path='*' element={ <Navigate to={"/"}/>} />
           </Routes>
         </BrowserRouter>

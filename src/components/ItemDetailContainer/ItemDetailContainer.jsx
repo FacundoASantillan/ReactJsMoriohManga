@@ -1,28 +1,30 @@
 import { useEffect, useState } from 'react'
-import { pedirProductos } from '../../helpers/pedirproducto'
+import { doc, getDoc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
 import BasicExample from '../spinner/spinner'
 import { ItemDetailCard } from '../ItemDetailCard/ItemDetailCard'
 import "./ItemDetailContainer.css"
-
+import { db } from '../../firebase/config'
 
 export const ItemDetailContainer = ({Stock}) => {
     const [item, setItem] = useState(null)
     const [loading, setLoading] = useState(true)
 
     const {itemId} = useParams()
-    /*console.log(itemId)
-    console.log(item)*/
     useEffect(() => {
         setLoading(true)
-        pedirProductos()
-        .then((data) => setItem(data.find((el) => (el.id) === Number(itemId))))
-        .catch((error) => {
-            console.log(error)
+
+        const docRef = doc(db, "productos", itemId)
+        getDoc(docRef)
+        .then((doc) => {
+            const iteM = {
+                id: doc.id,
+                ...doc.data()
+            }
+            setItem(iteM)
         })
-        .finally(() => {
-            setLoading(false)
-        })
+        .catch(e => console.log(e))
+        .finally(() => setLoading(false))
     }, [])
     
     

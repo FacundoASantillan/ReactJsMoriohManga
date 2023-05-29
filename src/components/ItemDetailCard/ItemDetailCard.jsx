@@ -29,17 +29,17 @@ export const ItemDetailCard = ({item}) => {
                 <h4><strong>${item.precio}</strong></h4>
                 <p>{item.detalle}</p>
                 <h6>Subtotal: ${item.precio * cantidad}</h6> 
-
+                {item.stock <= 10 && <h2>¡Quedan pocas unidades!</h2>}
                 {
                     isInCart(item.id)
                         ? <Link className="btn btn-dark" to="/Cart">Terminar compra</Link>
                         : <ItemCount
-                stock={item.stock}
-                cantidad={cantidad}
-                setCantidad={setCantidad}
-                item={item}
-                add={handleAdd}
-                />
+                            stock={item.stock}
+                            cantidad={cantidad}
+                            setCantidad={setCantidad}
+                            item={item}
+                            add={handleAdd}
+                        />
                 }
             </div>
         </div>

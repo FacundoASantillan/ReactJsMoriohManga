@@ -1,10 +1,11 @@
 
 import { useEffect, useState } from 'react'
 import './ItemListContainer.css'
-import { pedirProductos } from '../../helpers/pedirproducto'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 import ItemList from '../ItemList/ItemList'
-import BasicExample from '../spinner/spinner'
+import Loader from '../spinner/spinner'
 import { useParams } from 'react-router-dom'
+import { db } from '../../firebase/config'
 
 export const ItemListContainer = ({Stock}) =>{
     const [productos, setProductos] = useState([])
@@ -15,20 +16,24 @@ export const ItemListContainer = ({Stock}) =>{
     console.log(editorialId)
     useEffect(() => {
         setLoading(true)
-        pedirProductos()
-        .then((data) => {
-            if (!editorialId) {
-                setProductos(data)
-            }else{
-                setProductos(data.filter((el) => (el.editorial) === editorialId))
-            }
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+
+        const productosRef = collection(db,"productos")
+        const q = editorialId
+            ? query(productosRef, where("editorial","==",editorialId))
+            : productosRef
+
+        getDocs(q)
+            .then((res) => {
+                const docs = res.docs.map((doc) => {
+                    return{
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                })
+                setProductos(docs)
+            })
+            .catch(e => console.log(e))
+            .finally(() => setLoading(false))
     }, [editorialId])
     
     
@@ -38,7 +43,7 @@ export const ItemListContainer = ({Stock}) =>{
             <hr />
             <p>{Stock}</p>
             { loading
-                ? <BasicExample />
+                ? <Loader />
                 : <ItemList items={productos}/>
             }
             
