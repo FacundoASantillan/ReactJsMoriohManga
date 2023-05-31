@@ -36,17 +36,17 @@
     margin-left: 20px;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    color: #8f1a26;
+    color: white;
     background-color: #e1aa47;
+    border: 2px solid #e1aa47;
     padding: 15px;
     border-radius: 30px;
     font-weight: 700;
 }
 
 .detalle-producto div a:hover{
-    background-color: black;
-    transition-duration: 2s;
-    color: #e1aa47;
+    background-color: #8f1a26;
+    transition-duration: 3s;
 }
 .detalle-producto div h6{
     color: white;

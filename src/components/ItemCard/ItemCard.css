@@ -41,4 +41,5 @@
 .catalogo-index div a:hover{
     background-color: #e1aa47;
     transition-duration: 2s;
+    border: 1px solid #8f1a26;
 }

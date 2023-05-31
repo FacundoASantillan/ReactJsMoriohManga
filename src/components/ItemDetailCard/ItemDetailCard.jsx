@@ -7,8 +7,6 @@ import { Link } from "react-router-dom"
 export const ItemDetailCard = ({item}) => {
     const { addCart, isInCart } = useContext(CartContext)
 
-    console.log(isInCart(item.id))
-
     const [cantidad, setCantidad] = useState(1)
 
     const handleAdd = () => {
@@ -18,7 +16,6 @@ export const ItemDetailCard = ({item}) => {
         }
     addCart(newItem)
     }
-
 
     return (
         <div className="detalle-producto">
@@ -32,7 +29,7 @@ export const ItemDetailCard = ({item}) => {
                 {item.stock <= 10 && <h2>¡Quedan pocas unidades!</h2>}
                 {
                     isInCart(item.id)
-                        ? <Link className="btn btn-dark" to="/Cart">Terminar compra</Link>
+                        ? <Link  to="/Cart">Terminar compra</Link>
                         : <ItemCount
                             stock={item.stock}
                             cantidad={cantidad}

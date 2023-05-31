@@ -10,10 +10,9 @@ import { db } from '../../firebase/config'
 export const ItemListContainer = ({Stock}) =>{
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState (true)
-    console.log(productos)
 
     const {editorialId} = useParams()
-    console.log(editorialId)
+
     useEffect(() => {
         setLoading(true)
 
@@ -35,7 +34,6 @@ export const ItemListContainer = ({Stock}) =>{
             .catch(e => console.log(e))
             .finally(() => setLoading(false))
     }, [editorialId])
-    
     
     return(
         <div className="list_container">

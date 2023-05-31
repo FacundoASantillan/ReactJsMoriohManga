@@ -18,8 +18,8 @@ const Cart = () => {
     }
 
     return (
-        <div className='container my-5'>
-            <h2>Tu compra</h2>
+        <div className='container my-5 tC'>
+            <h2 className='tC'>Tu compra</h2>
                 <hr />
                 {
                     cart.map((item) => (
@@ -36,7 +36,7 @@ const Cart = () => {
                         </div>
                     ))
                 }
-            <div>
+            <div className='cartBtn'>
                 <hr />
                 <h3>TOTAL: ${totalCompra()}</h3>
                 <button onClick={emptyCart} className='btn btn-danger'>Vaciar carrito</button>
