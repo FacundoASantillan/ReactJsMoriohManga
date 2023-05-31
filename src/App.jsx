@@ -7,6 +7,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { CartProvider } from './context/Cartcontext';
 import Cart from './components/Cart/Cart';
 import FinishOrder from './components/FinishOrder/FinishOrder';
+import SocialNetworks from './components/SocialNetworks/SocialNetworks';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path='/Finishorder' element={<FinishOrder /> } />
             <Route path='*' element={ <Navigate to={"/"}/>} />
           </Routes>
+          <SocialNetworks/>
         </BrowserRouter>
       </div>
     </CartProvider>

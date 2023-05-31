@@ -8,6 +8,7 @@ import { db } from '../../firebase/config'
 
 export const ItemDetailContainer = ({Stock}) => {
     const [item, setItem] = useState(null)
+
     const [loading, setLoading] = useState(true)
 
     const {itemId} = useParams()
@@ -26,8 +27,7 @@ export const ItemDetailContainer = ({Stock}) => {
         .catch(e => console.log(e))
         .finally(() => setLoading(false))
     }, [])
-    
-    
+
     return(
         <div className="producto-detalle">
             <h2>Catalogo de productos</h2>

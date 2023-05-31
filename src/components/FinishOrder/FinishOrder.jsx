@@ -109,7 +109,7 @@ const FinishOrder = () => {
                     <input 
                         className='form-control my-4'
                         type="number" 
-                        placeholder='Telefono'
+                        placeholder='Teléfono'
                         value={values.telefono}
                         name='telefono'
                         onChange={handleChange}
@@ -131,10 +131,8 @@ const FinishOrder = () => {
                     </div>
                 </div>)}
             </Formik>
-            
-            
         </div>
     )
-    }
+}
 
 export default FinishOrder
