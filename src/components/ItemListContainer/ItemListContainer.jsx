@@ -34,7 +34,7 @@ export const ItemListContainer = ({Stock}) =>{
             .catch(e => console.log(e))
             .finally(() => setLoading(false))
     }, [editorialId])
-    
+
     return(
         <div className="list_container">
             <h2>Catalogo de productos</h2>
